@@ -50,9 +50,9 @@ float rain_gauge = 0;
 #define B_LED 26
 #define SDA_PIN 21
 #define SCL_PIN 22
-#define HUM_SOIL 15
+#define HUM_SOIL 14
 #define HUM_AIR 27
-#define AIR_SPD 23
+#define AIR_SPD 17
 #define AIR_DIR1 12
 #define AIR_DIRP2 13
 
@@ -250,7 +250,7 @@ void Task_Main(void *pvParameters) {
         packet[4] = (uint8_t) map(UV_index,      0, 4095, 0, 255);
         packet[5] = (uint8_t) map((long)air_dir, 0, 4095, 0, 255);
         packet[6] = (uint8_t) constrain((int)air_speed, 0, 255);
-        packet[7] = (uint8_t) map(WaterLevel,    0, 4095, 0, 255);
+        packet[7] = (uint8_t) WaterLevel;//map(WaterLevel,    0, 4095, 0, 255);
 
         Serial.printf("\nSent packet: temperature - %dC, pressure - %dhPa, air humidity - %dRh, soil humidity - %dRh, UV - %d, air direction - %d, air speed - %.1f counts/s, water level - %d",
                             packet[0], (int)pressure, packet[2], packet[3], packet[4], packet[5], air_speed, packet[7]);
