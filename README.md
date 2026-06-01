@@ -1,9 +1,9 @@
-# MeTeoRX
+# Me-TR
 
-A robust, remote meteorological station powered by the **ESP32** microcontroller and **LoRa** technology. MeTeoRX is designed for reliable, long-range weather data collection, transmission, and easy on-site configuration.
+A robust, remote meteorological station powered by the **ESP32** microcontroller and **LoRa** technology. Me-TR is designed for reliable, long-range weather data collection, transmission, and easy on-site configuration.
 
 ## System Architecture
-The MeTeoRX system consists of two dedicated assemblies:
+The Me-TR system consists of two dedicated assemblies:
 
 * **Transmitter (Tx):** The remote sensor node. It continuously gathers environmental telemetry and broadcasts the data packets over LoRa.
 * **Receiver (Rx):** The base station. It is responsible for listening, receiving, and decoding the data packets sent by the Tx node for further processing and display.
